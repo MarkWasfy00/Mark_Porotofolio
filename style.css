@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;500&display=swap');*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+    --Main-Card: rgba(16, 7, 134, 0.658);
+    --Font: whitesmoke;
+    --background : #f4433600;
+}
+
+body {
+    /* background-image: url('doruk-yemenici-u4yvPVf1d2U-unsplash.jpg'); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #313040;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: bold;
+    height: 1200px;
+}
+
+
+
+
+.container {
+    display: grid;
+    height: 90vh;
+    width: 90vw;
+    gap:1rem;
+    margin: 50px auto;
+    grid-template-rows: repeat(4,1fr);
+    grid-template-columns: repeat(4,1fr);
+    grid-template-areas: 'header header header header'
+                        'concept concept concept left'
+                        ' concept concept concept left'
+                        'footer footer footer footer';
+    
+}
+
+
+
+
+
+
+.item1{
+    border-radius: 10px;
+    grid-area: header;
+    color: var(--Font);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+
+
+.logo {
+    background-image: url('104571451_10207273335948391_4505790066415207605_n.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    margin-bottom: 20px;
+    border:var(--Font) 1px solid;
+    box-shadow: var(--Font) 0px 20px 30px -10px;
+}
+
+.logo:hover{
+    background-image: linear-gradient(to bottom , rgba(255, 255, 255, 0), hsla(244, 14%, 22%, 0.5)) ,url('104571451_10207273335948391_4505790066415207605_n.jpg');
+
+}
+
+
+.holder{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+
+.item2{
+    border-radius: 10px;
+    grid-area: concept;
+    color: var(--Font);
+    font-size: 1.5rem;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.skills {
+   
+    font-size: 2rem;
+    font-family: 'Rajdhani';
+    background-color: var(--background);
+    border-radius: 5px;
+    border: 0.5px var(--Font) solid;
+}
+
+.skill {
+    background-color: var(--background);
+    border-radius: 5px;
+    border: 0.5px var(--Font) solid;
+}
+
+
+.item3 {
+    border-radius: 10px;
+    grid-area: left;
+    color: var(--Font);
+    font-size: 1.5rem;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--background);
+    border: 0.5px var(--Font) solid;
+}
+
+
+
+.item4 {
+    border-radius: 10px;
+    grid-area: footer;
+    background-color: var(--Main-Card);
+    color: var(--Font);
+    background-color: var(--background);
+    border-radius: 5px;
+    border: 0.5px var(--Font) solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media (max-width: 1475px){
+    .container {
+        grid-template-areas: 'header header header header'
+                            'concept concept concept concept'
+                            ' left left left left'
+                            'footer footer footer footer';
+    }
+
+}
+
+
+@media (min-width: 1476px){
+    .container {
+        grid-template-areas: 'header header header header'
+                            'concept concept concept left'
+                            ' concept concept concept left'
+                            'footer footer footer footer';
+    }
+
+    .item1{
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 20px;
+    }
+    
+    .holder{
+        
+        flex-direction: row;
+        
+    }
+    .holder div{
+        padding: 20px;
+    }
+    
+
+    .item2{
+        gap: 0;
+        background-color: rgba(255, 255, 255, 0.5);
+        
+    }
+    
+    .skills {
+        font-size: 2rem;
+        font-family: 'Rajdhani';
+        background-color: transparent;
+        border-radius: 0;
+        border: 0;
+        border-bottom: 1px whitesmoke solid;
+    }
+    
+    .skill {
+        background-color: transparent;
+        border-radius: 0;
+        border: 0;
+    }
+
+    .item3 {
+        border: 0;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .item4 {
+        border-radius: 10px;
+        grid-area: footer;
+        color: var(--Font);
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 5px;
+        border: 0;
+    }
+    
+}
